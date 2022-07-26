@@ -599,6 +599,6 @@ let candidateCommiteeCodes = [
   "C00600718",
   "C00668491",
   "C00655571"
-  ]
+]
 
 export default candidateCommiteeCodes; commiteeCodes

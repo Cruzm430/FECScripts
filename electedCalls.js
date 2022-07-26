@@ -2,13 +2,14 @@ import axios from 'axios';
 import fs from 'fs'
 import candidateCommiteeCodes from './values';
 import commiteeCodes from './values';
+import config from './config';
 
 const getCommitteeTotals = async (candidateOrCommitteeArr, monthString) =>{
   let working = []
   let broken = []
   for(let item in candidateOrCommitteeArr){
     try{
-      const resp = await axios.get(`https://api.open.fec.gov/v1/committee/${candidateOrCommitteeArr[item]}/totals/?sort_hide_null=false&sort_nulls_last=false&sort_null_only=false&page=1&cycle=2020&cycle=2022&api_key=l7jGDYZq8wLfYgIPyGdm7VPnXShr0FA7lhDbTFX3&per_page=20&sort=-cycle`)
+      const resp = await axios.get(`https://api.open.fec.gov/v1/committee/${candidateOrCommitteeArr[item]}/totals/?sort_hide_null=false&sort_nulls_last=false&sort_null_only=false&page=1&cycle=2020&cycle=2022&api_key=${config.apiKey}&per_page=20&sort=-cycle`)
       for(let call of resp.data.results){
         if(Object.keys(call).length){
           working.push(call)
