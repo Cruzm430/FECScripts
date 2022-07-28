@@ -1,4 +1,4 @@
-let commiteeCodes = [
+commiteeCodes = [
     "C00040279",
     "C00536573",
     "C00034785",
@@ -314,7 +314,7 @@ let commiteeCodes = [
     "C00399386"
 ]
 
-let candidateCommiteeCodes = [
+candidateCommiteeCodes = [
   "C00412890",
   "C00629949",
   "C00768705",
@@ -329,7 +329,7 @@ let candidateCommiteeCodes = [
   "C00720375",
   "C00661561",
   "C00714865",
-  "C00718957",
+  # "C00718957",
   "C00476820",
   "C00444968",
   "C00460063",
@@ -600,5 +600,3 @@ let candidateCommiteeCodes = [
   "C00668491",
   "C00655571"
 ]
-
-export default candidateCommiteeCodes; commiteeCodes
